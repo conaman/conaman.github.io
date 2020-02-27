@@ -4,10 +4,10 @@ date: 2020-02-27
 category:
 - Unreal Engine 4
 tags:
-- UE4
-- Build
-- UnderConstruct
 ---
+
+# Unreal Engine 4 build command line arguments
+
 ## Build command
 	RunUAT.bat
 	AutomationTool.exe 
