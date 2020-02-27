@@ -1,3 +1,13 @@
+---
+title : Unreal Engine 4 build command line arguments
+date: 2020-02-27
+category:
+- Unreal Engine 4
+tags:
+- UE4
+- Build
+---
+
 # Unreal Engine 4 build command line arguments
 (Under Construct)
 
@@ -29,5 +39,5 @@
 4. Build *Source\Programs\AutomationTool\AutomationTool.csproj*
 5. Launch AutomationTool.exe by AutomationToolLauncher.exe
 	```
-	AutomationToolLauncher.exe args... [-compile]
+	AutomationToolLauncher.exe arguments
 	```
