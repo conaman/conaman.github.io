@@ -8,10 +8,9 @@ category:
 # Unreal Engine 4 build command line arguments
 
 ## Build command
-	<Step>
-		RunUAT.bat
-		AutomationToolLauncher.exe
-		AutomationTool.exe 
+	RunUAT.bat
+	AutomationToolLauncher.exe
+	AutomationTool.exe 
 
 ---
 ## RunUAT.bat
@@ -99,11 +98,12 @@ category:
 - **Value** : Environment Value for process
 
 ### BuildCommand : Argument without '-'
+
 #### BuildCookRun
 - Builds/Cooks/Runs a project.
->	For non-uprojects project targets are discovered by compiling target rule files found in the project folder.
->	If -map is not specified, the command looks for DefaultMap entry in the project's DefaultEngine.ini and if not found, in BaseEngine.ini.
->	If no DefaultMap can be found, the command falls back to /Engine/Maps/Entry.
+	- For non-uprojects project targets are discovered by compiling target rule files found in the project folder.
+	- If -map is not specified, the command looks for DefaultMap entry in the project's DefaultEngine.ini and if not found, in BaseEngine.ini.
+	- If no DefaultMap can be found, the command falls back to /Engine/Maps/Entry.
 
 - Command Arguments
 	- **project=Path** : Project path (required)
@@ -129,3 +129,14 @@ category:
 	
 - CodeSign
 	- **NoSign** : Skips signing of code/content files.
+
+#### SyncDDC
+- Merge one or more remote DDC shares into a local share, taking files with the newest timestamps and keeping the size below a certain limit
+
+- Command Arguments
+	- **LocalDir=<Path>** : The local DDC directory to add/remove files from
+	- **RemoteDir=<Path>** : The remote DDC directory to pull from. May be specified multiple times.
+	- **MaxSize=<Size>** : Maximum size of the local DDC directory. TB/MB/GB/KB units are allowed.
+	- **MaxDays=<Num>** : Only copies files with modified timestamps in the past number of days.
+	- **TimeLimit=<Time>** : Maximum time to run for. h/m/s units are allowed.
+	- **Preview=boolean** : Preview
