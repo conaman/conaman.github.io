@@ -6,11 +6,8 @@ category:
 tags:
 - UE4
 - Build
+- UnderConstruct
 ---
-
-# Unreal Engine 4 build command line arguments
-(Under Construct)
-
 ## Build command
 	RunUAT.bat
 	AutomationTool.exe 
