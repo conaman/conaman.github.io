@@ -98,5 +98,34 @@ category:
 - **Key** : Environment Variable for process
 - **Value** : Environment Value for process
 
-#### BuildCommand : Argument without '-'
-- 
+### BuildCommand : Argument without '-'
+#### BuildCookRun
+- Builds/Cooks/Runs a project.
+>	For non-uprojects project targets are discovered by compiling target rule files found in the project folder.
+>	If -map is not specified, the command looks for DefaultMap entry in the project's DefaultEngine.ini and if not found, in BaseEngine.ini.
+>	If no DefaultMap can be found, the command falls back to /Engine/Maps/Entry.
+
+- Command Arguments
+	- **project=Path** : Project path (required)
+	- **destsample** : Destination Sample name
+	- **foreigndest** : Foreign Destination
+	- **cookdir** : Directories to cook
+	- **i18npreset=value** : Internationalization preset
+	- **cookcultures=value** : Cultures to cook
+	- **foreign=boolean** : Make foreign sample
+	- **foreigncode=boolean** : Make foreign code sample
+	
+- ProjectParams
+	- **targetplatform=PlatformName** : target platform for building, cooking and deployment (also -Platform)
+	- **servertargetplatform=PlatformName** : target platform for building, cooking and deployment of the dedicated server (also -ServerPlatform)
+	
+- UE4Build
+	- **ForceMonolithic** : Toggle to combined the result into one executable
+	- **ForceDebugInfo** : Forces debug info even in development builds
+	- **NoXGE** : Toggle to disable the distributed build process
+	- **ForceNonUnity** : Toggle to disable the unity build system
+	- **ForceUnity** : Toggle to force enable the unity build system
+	- **Licensee** : If set, this build is being compiled by a licensee
+	
+- CodeSign
+	- **NoSign** : Skips signing of code/content files.
