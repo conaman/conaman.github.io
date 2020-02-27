@@ -72,12 +72,12 @@ category:
 - **-IgnoreDependencies** : Ignore dependencies
 
 #### Legacy command line parameters
-<pre>
-	This command is LEGACY because we used to run UAT.exe to compile scripts by default.
-	Now we only compile by default when run via RunUAT.bat, which still understands -nocompile.
-	However, the batch file simply passes on all arguments, so UAT will choke when encountering -nocompile.
-	Keep this CommandLineArg around so that doesn't happen.
-</pre>
+- This command is LEGACY because we used to run UAT.exe to compile scripts by default.
+- Now we only compile by default when run via RunUAT.bat, which still understands -nocompile.
+- However, the batch file simply passes on all arguments, so UAT will choke when encountering -nocompile.
+- Keep this CommandLineArg around so that doesn't happen.
+
+
 - **-NoCompile** : No compile
 - **-NoCompileEditor** : No compile editor
 - **-Help** : Displays help
@@ -96,6 +96,7 @@ category:
 #### Other Key=Value Style
 - **Key** : Environment Variable for process
 - **Value** : Environment Value for process
+
 
 ### BuildCommand : Argument without '-'
 
@@ -134,9 +135,49 @@ category:
 - Merge one or more remote DDC shares into a local share, taking files with the newest timestamps and keeping the size below a certain limit
 
 - Command Arguments
-	- **LocalDir=<Path>** : The local DDC directory to add/remove files from
-	- **RemoteDir=<Path>** : The remote DDC directory to pull from. May be specified multiple times.
-	- **MaxSize=<Size>** : Maximum size of the local DDC directory. TB/MB/GB/KB units are allowed.
-	- **MaxDays=<Num>** : Only copies files with modified timestamps in the past number of days.
-	- **TimeLimit=<Time>** : Maximum time to run for. h/m/s units are allowed.
+	- **LocalDir=Path** : The local DDC directory to add/remove files from
+	- **RemoteDir=Path** : The remote DDC directory to pull from. May be specified multiple times.
+	- **MaxSize=Size** : Maximum size of the local DDC directory. TB/MB/GB/KB units are allowed.
+	- **MaxDays=Num** : Only copies files with modified timestamps in the past number of days.
+	- **TimeLimit=Time** : Maximum time to run for. h/m/s units are allowed.
 	- **Preview=boolean** : Preview
+	
+#### BuildTarget
+- Builds the specified targets and configurations for the specified project
+	- Example BuildTarget -project=QAGame -target=Editor+Game -platform=PS4+XboxOne -configuration=Development
+	- Note: Editor will only ever build for the current platform in a Development config and required tools will be included
+
+- Command Arguments
+	- **project=QAGame** :  Project to build. Will search current path and paths in ueprojectdirs. If omitted will build vanilla UE4Editor
+	- **platform=PS4+XboxOne** : Platforms to build, join multiple platforms using +
+	- **configuration=Development+Test** : Configurations to build, join multiple configurations using +
+	- **target=Editor+Game** : Targets to build, join multiple targets using +
+	- **notools** : Don't build any tools (UHT, ShaderCompiler, CrashReporter
+	- **clean** : Clean
+
+#### RebuildLightMaps
+- Helper command used for rebuilding a projects light maps
+
+- Command Arguments
+	- **Project=Path** : Absolute path to a .uproject file
+	- **MapsToRebuildLightMaps=list** : A list of '+' delimited maps we wish to build lightmaps for.
+	- **CommandletTargetName** : The Target used in running the commandlet
+	- **StakeholdersEmailAddresses** : Users to notify of completion
+	- **nobuild** : Don't build any tools (UHT, ShaderCompiler, CrashReporter
+	
+#### CleanFormalBuilds
+- Removes folders matching a pattern in a given directory that are older than a certain time.
+
+- Command Arguments
+	- **ParentDir=Direcctory** : Path to the root directory
+	- **SearchPattern=Patterns** : Pattern to match against
+	- **Days=N** : Number of days to keep in temp storage (optional - defaults to 4)
+	
+#### ExportIPAFromArchive
+- Creates an IPA from an xarchive file
+
+- Command Arguments
+	- **method=method** : Purpose of the IPA. (Development, Adhoc, Store)
+	- **TemplateFile=File** : Path to plist template that will be filled in based on other arguments. See ExportOptions.plist.template for an example
+	- **OptionsFile** : Path to an XML file of options that we'll select from based on method. See ExportOptions.Values.xml for an example
+	- **Project** : Name of this project (e.g ShooterGame, EngineTest)
