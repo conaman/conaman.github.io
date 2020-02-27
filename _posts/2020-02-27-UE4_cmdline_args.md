@@ -72,11 +72,10 @@ category:
 - **-IgnoreDependencies** : Ignore dependencies
 
 #### Legacy command line parameters
-- This command is LEGACY because we used to run UAT.exe to compile scripts by default.
-- Now we only compile by default when run via RunUAT.bat, which still understands -nocompile.
-- However, the batch file simply passes on all arguments, so UAT will choke when encountering -nocompile.
-- Keep this CommandLineArg around so that doesn't happen.
-
+	This command is LEGACY because we used to run UAT.exe to compile scripts by default.
+	Now we only compile by default when run via RunUAT.bat, which still understands -nocompile.
+	However, the batch file simply passes on all arguments, so UAT will choke when encountering -nocompile.
+	Keep this CommandLineArg around so that doesn't happen.
 
 - **-NoCompile** : No compile
 - **-NoCompileEditor** : No compile editor
