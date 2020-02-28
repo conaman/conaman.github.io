@@ -1,11 +1,11 @@
 ---
-title : Unreal Engine 4 build command line arguments
+title : Unreal Engine 4 build command-line arguments
 date: 2020-02-27
 category:
 - UE4
 ---
 
-# Unreal Engine 4 build command line arguments
+# Unreal Engine 4 build command-line arguments
 
 ## Build command
 	RunUAT.bat
