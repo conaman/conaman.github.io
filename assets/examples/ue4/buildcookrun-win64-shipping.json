@@ -1,0 +1,20 @@
+{
+  "scripts": [
+    {
+      "script": "BuildCookRun",
+      "project": "D:\\Projects\\MyGame\\MyGame.uproject",
+      "targetplatform": "Win64",
+      "clientconfig": "Shipping",
+      "build": true,
+      "cook": true,
+      "stage": true,
+      "pak": true,
+      "archive": true,
+      "archivedirectory": "D:\\Builds\\MyGame\\Win64",
+      "prereqs": true,
+      "unattended": true,
+      "Utf8Output": true,
+      "NoP4": true
+    }
+  ]
+}
