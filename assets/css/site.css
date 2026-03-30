@@ -289,12 +289,14 @@ img {
   top: 104px;
   display: grid;
   gap: 16px;
+  width: 100%;
 }
 
 .home-content {
   min-width: 0;
   display: grid;
   gap: 22px;
+  width: 100%;
 }
 
 .sidebar-card,
@@ -305,6 +307,7 @@ img {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
+  width: 100%;
 }
 
 .sidebar-card {
@@ -922,6 +925,11 @@ img {
   .panel-grid,
   .writing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-shell {
+    display: flex;
+    flex-direction: column;
   }
 
   .focus-grid {
