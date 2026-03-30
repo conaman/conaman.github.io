@@ -388,11 +388,13 @@ img {
 .feed-list {
   display: grid;
   gap: 16px;
+  min-width: 0;
 }
 
 .feed-card {
   display: grid;
   gap: 14px;
+  min-width: 0;
 }
 
 .entry-header {
@@ -400,6 +402,11 @@ img {
   justify-content: space-between;
   align-items: start;
   gap: 16px;
+  min-width: 0;
+}
+
+.entry-header > div {
+  min-width: 0;
 }
 
 .entry-date {
@@ -419,6 +426,7 @@ img {
   background: rgba(246, 248, 250, 0.9);
   border: 1px solid rgba(208, 215, 222, 0.82);
   border-radius: var(--radius-sm);
+  min-width: 0;
 }
 
 .entry-note strong {
@@ -466,6 +474,16 @@ img {
   letter-spacing: 0.02em;
   text-transform: none;
   font-size: 0.84rem;
+}
+
+.tag-list {
+  min-width: 0;
+}
+
+.tag-list li {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .cta-row,
