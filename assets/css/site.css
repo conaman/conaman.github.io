@@ -312,15 +312,26 @@ img {
   gap: 14px;
 }
 
-.sidebar-card .profile-card {
-  grid-template-columns: 88px 1fr;
-  align-items: center;
+.sidebar-profile {
+  gap: 16px;
 }
 
-.sidebar-card .profile-card__avatar {
-  width: 88px;
-  height: 88px;
-  border-radius: 24px;
+.sidebar-profile__avatar {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.sidebar-profile__body {
+  display: grid;
+  gap: 6px;
+}
+
+.sidebar-profile__body .profile-card__role {
+  margin: 0;
 }
 
 .sidebar-title {

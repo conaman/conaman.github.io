@@ -6,15 +6,13 @@ nav_key: home
 {% assign latest_post = site.posts | first %}
 <div class="home-shell">
   <aside class="home-sidebar">
-    <section class="sidebar-card">
-      <div class="profile-card">
-        <img class="profile-card__avatar" src="{{ site.avatar }}" alt="GitHub profile image for conaman">
-        <div>
-          <p class="section-eyebrow">Profile</p>
-          <h2 class="profile-card__name">conaman</h2>
-          <p class="profile-card__subname">Seungjee Baek</p>
-          <p class="profile-card__role">Game client programmer interested in game engines, tooling, debugging, and technical articles grounded in real workflows.</p>
-        </div>
+    <section class="sidebar-card sidebar-profile">
+      <p class="section-eyebrow">Profile</p>
+      <img class="sidebar-profile__avatar" src="{{ site.avatar }}" alt="GitHub profile image for conaman">
+      <div class="sidebar-profile__body">
+        <h2 class="profile-card__name">conaman</h2>
+        <p class="profile-card__subname">Seungjee Baek</p>
+        <p class="profile-card__role">Game client programmer interested in game engines, tooling, debugging, and technical articles grounded in real workflows.</p>
       </div>
       <p class="microcopy">A running index of public work, implementation notes, and articles that stay close to actual development constraints.</p>
     </section>
@@ -73,7 +71,7 @@ nav_key: home
   <div class="home-content">
     <section class="feed-intro">
       <p class="section-eyebrow">Home</p>
-      <h1>Projects and articles from conaman.</h1>
+      <h1>Projects and articles.</h1>
       <p class="page-intro">A blog-style front page for public repositories, source-level notes, and practical write-ups around game engines, debugging, and the small tools that make repeated work easier.</p>
     </section>
 
