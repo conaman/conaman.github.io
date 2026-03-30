@@ -777,7 +777,8 @@ img {
 
 .project-card .card-links {
   margin-top: auto;
-  padding-top: 6px;
+  padding-top: 16px;
+  padding-bottom: 6px;
   align-items: stretch;
 }
 
