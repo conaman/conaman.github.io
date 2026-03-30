@@ -1078,6 +1078,20 @@ img {
     text-align: center;
   }
 
+  .cta-row,
+  .card-links,
+  .post-cta {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .cta-row .button,
+  .post-cta .button {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .project-card .card-links .button {
     flex: 1 1 100%;
   }
@@ -1106,6 +1120,11 @@ img {
   .project-card .card-links .button {
     min-width: 0;
     max-width: 100%;
+  }
+
+  .project-card .card-links {
+    padding-top: 14px;
+    padding-bottom: 0;
   }
 
   .feed-intro h1 {
