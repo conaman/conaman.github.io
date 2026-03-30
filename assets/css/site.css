@@ -360,6 +360,14 @@ img {
   font-size: 1.5rem;
 }
 
+.profile-card__subname {
+  margin: 4px 0 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .profile-card__role,
 .microcopy,
 .post-meta,
