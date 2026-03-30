@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap");
 
 :root {
-  --bg: #07111f;
-  --bg-soft: rgba(10, 23, 40, 0.84);
-  --panel: rgba(10, 20, 34, 0.72);
-  --panel-strong: rgba(12, 24, 40, 0.9);
-  --panel-border: rgba(139, 192, 255, 0.18);
-  --text: #eff6ff;
-  --muted: #a7b6ca;
-  --heading: #f9fbff;
-  --accent: #7dd3fc;
-  --accent-strong: #38bdf8;
-  --accent-warm: #f59e0b;
-  --success: #8bffcc;
-  --shadow: 0 24px 80px rgba(3, 10, 20, 0.45);
+  --bg: #f6f8fa;
+  --bg-soft: rgba(246, 248, 250, 0.94);
+  --panel: rgba(255, 255, 255, 0.9);
+  --panel-strong: rgba(255, 255, 255, 0.98);
+  --panel-border: rgba(208, 215, 222, 0.9);
+  --text: #24292f;
+  --muted: #57606a;
+  --heading: #1f2328;
+  --accent: #0969da;
+  --accent-strong: #1f6feb;
+  --accent-warm: #9a6700;
+  --success: #1a7f37;
+  --shadow: 0 18px 42px rgba(31, 35, 40, 0.08);
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
@@ -50,10 +50,10 @@ img {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(245, 158, 11, 0.12), transparent 30%),
-    linear-gradient(180deg, rgba(3, 8, 16, 0.1), rgba(3, 8, 16, 0.5)),
-    linear-gradient(135deg, #07111f 0%, #081728 48%, #050d18 100%);
+    radial-gradient(circle at top left, rgba(9, 105, 218, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(31, 111, 235, 0.06), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(246, 248, 250, 0.94)),
+    linear-gradient(135deg, #ffffff 0%, #f6f8fa 52%, #eef3f8 100%);
   z-index: -2;
 }
 
@@ -62,10 +62,10 @@ img {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(125, 211, 252, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(125, 211, 252, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(208, 215, 222, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(208, 215, 222, 0.55) 1px, transparent 1px);
   background-size: 42px 42px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 88%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 88%);
   z-index: -1;
 }
 
@@ -82,14 +82,14 @@ img {
   gap: 20px;
   padding: 16px 20px;
   margin-top: 8px;
-  background: rgba(6, 16, 30, 0.72);
-  border: 1px solid rgba(139, 192, 255, 0.12);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--panel-border);
   border-radius: 999px;
   backdrop-filter: blur(18px);
   position: sticky;
   top: 16px;
   z-index: 10;
-  box-shadow: 0 18px 50px rgba(2, 8, 16, 0.18);
+  box-shadow: 0 14px 34px rgba(31, 35, 40, 0.08);
 }
 
 .brand {
@@ -105,8 +105,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.26), rgba(245, 158, 11, 0.3));
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(135deg, rgba(9, 105, 218, 0.1), rgba(26, 127, 55, 0.08));
+  border: 1px solid var(--panel-border);
   color: var(--heading);
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.2rem;
@@ -145,8 +145,8 @@ img {
 
 .site-nav a:hover,
 .site-nav a.is-active {
-  color: var(--heading);
-  background: rgba(125, 211, 252, 0.12);
+  color: var(--accent-strong);
+  background: rgba(9, 105, 218, 0.1);
   transform: translateY(-1px);
 }
 
@@ -322,8 +322,8 @@ img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 12px 30px rgba(31, 35, 40, 0.1);
 }
 
 .sidebar-profile__body {
@@ -351,16 +351,16 @@ img {
   gap: 14px;
   padding: 12px 14px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(246, 248, 250, 0.9);
+  border: 1px solid rgba(208, 215, 222, 0.8);
   color: var(--heading);
   transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
 
 .sidebar-nav a:hover {
   transform: translateY(-1px);
-  border-color: rgba(125, 211, 252, 0.24);
-  background: rgba(125, 211, 252, 0.08);
+  border-color: rgba(9, 105, 218, 0.2);
+  background: rgba(9, 105, 218, 0.06);
 }
 
 .sidebar-nav strong {
@@ -378,9 +378,9 @@ img {
 .sidebar-tags span {
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #d8e6f6;
+  background: rgba(9, 105, 218, 0.06);
+  border: 1px solid rgba(9, 105, 218, 0.12);
+  color: var(--accent-strong);
   font-size: 0.86rem;
 }
 
@@ -429,8 +429,8 @@ img {
 .entry-note {
   margin: 0;
   padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(246, 248, 250, 0.9);
+  border: 1px solid rgba(208, 215, 222, 0.82);
   border-radius: var(--radius-sm);
 }
 
@@ -449,8 +449,8 @@ img {
 .entry-meta span {
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(246, 248, 250, 0.94);
+  border: 1px solid rgba(208, 215, 222, 0.85);
   color: var(--muted);
   font-size: 0.84rem;
 }
@@ -473,9 +473,9 @@ img {
 .pill {
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(139, 192, 255, 0.16);
-  background: rgba(125, 211, 252, 0.08);
-  color: #d5ebff;
+  border: 1px solid rgba(9, 105, 218, 0.14);
+  background: rgba(9, 105, 218, 0.06);
+  color: var(--accent-strong);
   letter-spacing: 0.02em;
   text-transform: none;
   font-size: 0.84rem;
@@ -503,7 +503,7 @@ img {
   min-height: 48px;
   padding: 0 18px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--panel-border);
   font-weight: 600;
   transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
@@ -513,12 +513,14 @@ img {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.24), rgba(56, 189, 248, 0.1));
-  border-color: rgba(125, 211, 252, 0.34);
+  background: linear-gradient(180deg, #218bff, #0969da);
+  border-color: rgba(9, 105, 218, 0.9);
+  color: #ffffff;
 }
 
 .button-secondary {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--heading);
 }
 
 .hero-panel {
@@ -536,7 +538,7 @@ img {
   width: 220px;
   height: 220px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.22), transparent 65%);
+  background: radial-gradient(circle, rgba(9, 105, 218, 0.12), transparent 65%);
 }
 
 .profile-card {
@@ -551,8 +553,8 @@ img {
   height: 112px;
   object-fit: cover;
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 12px 30px rgba(31, 35, 40, 0.1);
 }
 
 .profile-card__name {
@@ -585,8 +587,8 @@ img {
 
 .metric {
   padding: 18px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(246, 248, 250, 0.86);
+  border: 1px solid rgba(208, 215, 222, 0.82);
   border-radius: var(--radius-md);
 }
 
@@ -681,19 +683,19 @@ img {
   width: 220px;
   height: 220px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 68%);
+  background: radial-gradient(circle, rgba(9, 105, 218, 0.1), transparent 68%);
   pointer-events: none;
 }
 
 .priority-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(125, 211, 252, 0.3);
-  box-shadow: 0 28px 90px rgba(3, 10, 20, 0.55);
+  border-color: rgba(9, 105, 218, 0.2);
+  box-shadow: 0 22px 48px rgba(31, 35, 40, 0.12);
 }
 
 .priority-card p {
   margin: 0;
-  color: #d8e6f6;
+  color: var(--muted);
 }
 
 .priority-card .section-eyebrow {
@@ -707,13 +709,13 @@ img {
 
 .priority-card-projects {
   background:
-    linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(9, 21, 38, 0.82)),
+    linear-gradient(135deg, rgba(9, 105, 218, 0.08), rgba(255, 255, 255, 0.98)),
     var(--panel-strong);
 }
 
 .priority-card-articles {
   background:
-    linear-gradient(135deg, rgba(245, 158, 11, 0.14), rgba(9, 21, 38, 0.82)),
+    linear-gradient(135deg, rgba(26, 127, 55, 0.06), rgba(255, 255, 255, 0.98)),
     var(--panel-strong);
 }
 
@@ -733,7 +735,7 @@ img {
 
 .priority-card__meta span,
 .priority-card__link {
-  color: #d8e6f6;
+  color: var(--muted);
   font-size: 0.92rem;
 }
 
@@ -762,8 +764,8 @@ img {
 .status-badge {
   padding: 8px 10px;
   border-radius: 999px;
-  background: rgba(139, 255, 204, 0.12);
-  border: 1px solid rgba(139, 255, 204, 0.22);
+  background: rgba(26, 127, 55, 0.1);
+  border: 1px solid rgba(26, 127, 55, 0.18);
   color: var(--success);
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -779,8 +781,8 @@ img {
   flex: 1 1 240px;
   min-height: 100%;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(246, 248, 250, 0.9);
+  border: 1px solid rgba(208, 215, 222, 0.82);
   border-radius: var(--radius-sm);
 }
 
@@ -831,7 +833,7 @@ img {
 .prose p,
 .prose li,
 .prose blockquote {
-  color: #d5e3f4;
+  color: var(--text);
 }
 
 .prose a,
@@ -847,7 +849,7 @@ img {
 
 .prose code {
   padding: 0.15rem 0.35rem;
-  background: rgba(255, 255, 255, 0.06);
+  background: #f6f8fa;
   border-radius: 6px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.95em;
@@ -856,8 +858,8 @@ img {
 .prose pre {
   padding: 18px;
   overflow-x: auto;
-  background: rgba(3, 9, 19, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #f6f8fa;
+  border: 1px solid rgba(208, 215, 222, 0.9);
   border-radius: var(--radius-md);
 }
 
@@ -869,7 +871,7 @@ img {
 .prose blockquote {
   margin: 1.6rem 0;
   padding: 0 0 0 18px;
-  border-left: 3px solid rgba(125, 211, 252, 0.4);
+  border-left: 3px solid rgba(9, 105, 218, 0.35);
 }
 
 .site-footer {
