@@ -778,10 +778,11 @@ img {
 .project-card .card-links {
   margin-top: auto;
   padding-top: 6px;
+  align-items: stretch;
 }
 
 .project-card .card-links .button {
-  flex: 0 0 auto;
+  flex: 1 1 220px;
 }
 
 .info-list li {
