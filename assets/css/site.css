@@ -221,8 +221,8 @@ img {
 
 .hero-copy h1 {
   margin-top: 14px;
-  font-size: clamp(2.9rem, 7vw, 5.4rem);
-  max-width: 11ch;
+  font-size: clamp(2.35rem, 6vw, 4.4rem);
+  max-width: 10ch;
 }
 
 .page-hero h1,
