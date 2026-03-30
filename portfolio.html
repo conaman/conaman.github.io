@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>conaman portfolio</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+    h1 { font-size: 44px; margin-bottom: 8px; }
+    p { line-height: 1.7; color: #cbd5e1; }
+    .hero { padding: 40px 0 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px; }
+    .card { background: #111827; border: 1px solid #334155; border-radius: 14px; padding: 20px; }
+    .card h2 { margin-top: 0; font-size: 24px; }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: #94a3b8; font-size: 14px; margin-bottom: 8px; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .button { border: 1px solid #334155; border-radius: 10px; padding: 10px 14px; display: inline-block; background: #0b1220; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="meta">GitHub portfolio</div>
+      <h1>Projects by conaman</h1>
+      <p>Game client and engine programmer focused on Unreal Engine tooling, engine internals, and practical AI-assisted workflows.</p>
+      <div class="links">
+        <a class="button" href="https://github.com/conaman">GitHub</a>
+        <a class="button" href="/projects.html">Projects list</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2><a href="https://github.com/conaman/unreal-mcp-ue4">unreal-mcp-ue4</a></h2>
+        <div class="meta">UE4.27.2-focused MCP server</div>
+        <p>MCP server for Unreal Engine 4.27.2 using Unreal Python Remote Execution with editor, asset, actor, UMG, Blueprint, and inspection workflows.</p>
+      </article>
+      <article class="card">
+        <h2><a href="https://github.com/conaman/SyncStreamingAssetsLoader">SyncStreamingAssetsLoader</a></h2>
+        <div class="meta">Unity Android utility</div>
+        <p>Utility for synchronously loading files from Unity StreamingAssets in environments such as Android where direct access is constrained.</p>
+      </article>
+      <article class="card">
+        <h2>What this site will become</h2>
+        <div class="meta">Next step</div>
+        <p>A project-first technical blog with deep dives, architecture notes, tool write-ups, and direct links back to the source repositories.</p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
