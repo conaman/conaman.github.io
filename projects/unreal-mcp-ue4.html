@@ -1,53 +1,86 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>unreal-mcp-ue4 | conaman</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 36px 20px 72px; }
-    h1 { font-size: 42px; margin-bottom: 10px; }
-    h2 { margin-top: 34px; font-size: 28px; }
-    p, li { line-height: 1.8; color: #cbd5e1; }
-    a { color: #93c5fd; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .meta { color: #94a3b8; font-size: 14px; margin-bottom: 12px; }
-    .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
-    .button { border: 1px solid #334155; border-radius: 10px; padding: 10px 14px; display: inline-block; background: #0b1220; }
-    .panel { background: #111827; border: 1px solid #334155; border-radius: 14px; padding: 20px; margin-top: 20px; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="meta">Featured project</div>
-    <h1>unreal-mcp-ue4</h1>
-    <p>UE4.27.2-focused MCP server for Unreal Engine using Unreal Python Remote Execution.</p>
-    <div class="links">
-      <a class="button" href="https://github.com/conaman/unreal-mcp-ue4">Repository</a>
-      <a class="button" href="/portfolio.html">Portfolio</a>
-      <a class="button" href="/about/">About</a>
-    </div>
+---
+title: unreal-mcp-ue4
+description: "Case study for unreal-mcp-ue4, a UE4.27.2-focused MCP server for practical Unreal Editor workflows."
+nav_key: projects
+permalink: /projects/unreal-mcp-ue4/
+---
+<section class="page-hero">
+  <p class="section-eyebrow">Featured Project</p>
+  <h1>unreal-mcp-ue4</h1>
+  <p class="page-intro">A UE4.27.2-focused MCP server built around Unreal Python Remote Execution, designed for practical editor workflows in projects that still operate inside UE4-era production constraints.</p>
+  <div class="cta-row">
+    <a class="button button-primary" href="https://github.com/conaman/unreal-mcp-ue4">Repository</a>
+    <a class="button button-secondary" href="{{ '/projects/' | relative_url }}">Back to projects</a>
+  </div>
+</section>
 
-    <div class="panel">
-      <h2>Why it exists</h2>
-      <p>Many MCP and Unreal automation examples assume UE5-era editor capabilities, but real projects often still live on UE4.27.2. This project focuses on practical workflows that remain realistic and useful in a UE4.27 production environment.</p>
-    </div>
+<section class="section">
+  <div class="panel-grid">
+    <article class="panel">
+      <p class="section-eyebrow">Why it exists</p>
+      <h2>UE4.27 still matters in real environments</h2>
+      <p>Many AI-assisted Unreal examples assume newer editor capabilities or UE5-specific expectations. This project starts from a simpler question: what does a useful MCP-shaped workflow look like when the team still lives on UE4.27.2?</p>
+    </article>
+    <article class="panel">
+      <p class="section-eyebrow">Core idea</p>
+      <h2>Respect the engine version you actually ship with</h2>
+      <p>The interesting constraint is not just “make Unreal work with MCP.” It is making that integration honest about engine boundaries, Python support, and the kinds of editor actions that are reliable enough to expose.</p>
+    </article>
+  </div>
+</section>
 
-    <div class="panel">
-      <h2>What it does</h2>
-      <ul>
-        <li>Reads project, map, asset, and actor information from an open Unreal Editor session</li>
-        <li>Exposes editor and content workflows through an MCP-friendly tool surface</li>
-        <li>Supports actors, assets, widgets, Blueprints, and inspection flows</li>
-        <li>Keeps the implementation grounded in what stock UE4.27 Python can support reliably</li>
+<section class="section">
+  <div class="project-grid">
+    <article class="project-card">
+      <div class="project-card__top">
+        <div>
+          <p class="card-eyebrow">What it does</p>
+          <h2>Editor and content workflows</h2>
+        </div>
+      </div>
+      <p>The server focuses on useful operations that map well to an open Unreal Editor session instead of chasing the largest possible surface area.</p>
+      <ul class="info-list">
+        <li>
+          <strong>Inspection</strong>
+          Reads project, map, asset, and actor information from the open editor.
+        </li>
+        <li>
+          <strong>Tool surface</strong>
+          Exposes editor and content workflows in a form that is comfortable for MCP-driven tools.
+        </li>
+        <li>
+          <strong>Coverage</strong>
+          Supports actors, assets, widgets, Blueprints, and inspection-oriented flows.
+        </li>
       </ul>
-    </div>
+    </article>
 
-    <div class="panel">
-      <h2>Direction</h2>
-      <p>This repository is a good example of the kind of work this site will document: not only what the code does, but also the tradeoffs, tool boundaries, compatibility decisions, and testing strategy behind it.</p>
+    <article class="project-card">
+      <div class="project-card__top">
+        <div>
+          <p class="card-eyebrow">Why it is interesting</p>
+          <h2>Constraints shape the design</h2>
+        </div>
+      </div>
+      <p>What makes this project representative is the way the implementation is bounded: it stays close to stock UE4.27 Python behavior and treats compatibility as part of the product design, not an afterthought.</p>
+      <ul class="tag-list">
+        <li>UE4.27.2</li>
+        <li>MCP</li>
+        <li>Python Remote Execution</li>
+        <li>Editor tooling</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page-hero">
+    <p class="section-eyebrow">Direction</p>
+    <h2>The project also sets the tone for the site.</h2>
+    <p class="page-intro">This is the kind of work I want the homepage to point toward: projects that are technically concrete, shaped by real compatibility constraints, and documented well enough that someone else can understand the trade-offs without digging through the whole repository first.</p>
+    <div class="cta-row">
+      <a class="button button-primary" href="{{ '/writing/' | relative_url }}">Related writing</a>
+      <a class="button button-secondary" href="{{ '/about/' | relative_url }}">About the author</a>
     </div>
   </div>
-</body>
-</html>
+</section>

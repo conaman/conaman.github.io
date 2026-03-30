@@ -1,8 +1,8 @@
 ---
-title : Unreal Engine 4 build command-line arguments
+title: "Unreal Engine 4 build command-line arguments"
 date: 2020-02-27
-category:
-- UE4
+tags: [UnrealEngine, UE4, Build, Automation]
+summary: "Reference notes on RunUAT, AutomationToolLauncher, AutomationTool, and common BuildCookRun arguments in UE4."
 ---
 
 # Unreal Engine 4 build command-line arguments

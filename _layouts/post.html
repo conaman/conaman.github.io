@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="post-shell">
+  <header class="post-header">
+    <p class="section-eyebrow">Writing</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}
+      <p class="post-summary">{{ page.summary }}</p>
+    {% endif %}
+    <div class="post-meta">
+      <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+      {% if page.tags and page.tags.size > 0 %}
+        <span>&middot;</span>
+        <span>{{ page.tags | join: " / " }}</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <div class="post-cta">
+    <a class="button button-secondary" href="{{ '/writing/' | relative_url }}">Back to writing</a>
+    <a class="button button-secondary" href="{{ '/projects/' | relative_url }}">View projects</a>
+  </div>
+</article>

@@ -1,1 +1,73 @@
-<html><body><h1>Projects</h1><p><a href="https://github.com/conaman/unreal-mcp-ue4">unreal-mcp-ue4</a></p><p><a href="https://github.com/conaman/SyncStreamingAssetsLoader">SyncStreamingAssetsLoader</a></p></body></html>
+---
+title: Projects
+description: "Selected projects by conaman across Unreal Engine tooling, utilities, and workflow automation."
+nav_key: projects
+permalink: /projects/
+---
+<section class="page-hero">
+  <p class="section-eyebrow">Projects</p>
+  <h1>Selected tools, utilities, and implementation-driven experiments.</h1>
+  <p class="page-intro">Each project here was chosen because it represents a real technical problem worth explaining: engine-version constraints, awkward platform behavior, or workflows that benefit from clearer tooling.</p>
+  <div class="cta-row">
+    <a class="button button-primary" href="https://github.com/conaman">GitHub profile</a>
+    <a class="button button-secondary" href="{{ '/writing/' | relative_url }}">Related writing</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+      <article class="project-card">
+        <div class="project-card__top">
+          <div>
+            <p class="card-eyebrow">{{ project.kind }}</p>
+            <h2>{{ project.title }}</h2>
+          </div>
+          <span class="status-badge">{{ project.status }}</span>
+        </div>
+
+        <p>{{ project.headline }}</p>
+        <p>{{ project.summary }}</p>
+
+        <ul class="info-list">
+          <li>
+            <strong>Problem</strong>
+            {{ project.challenge }}
+          </li>
+          <li>
+            <strong>Why it matters</strong>
+            {{ project.impact }}
+          </li>
+        </ul>
+
+        <ul class="tag-list">
+          {% for item in project.stack %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="card-links">
+          {% if project.detail_url %}
+            <a class="button button-primary" href="{{ project.detail_url | relative_url }}">Open case study</a>
+          {% endif %}
+          <a class="button button-secondary" href="{{ project.repository }}">View repository</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="panel-grid">
+    <article class="panel">
+      <p class="section-eyebrow">What gets featured</p>
+      <h2>Projects that expose decision-making</h2>
+      <p>I like projects that show their constraints clearly: why the approach was chosen, what environment it targets, and which compromises were worth making to keep the result useful.</p>
+    </article>
+    <article class="panel">
+      <p class="section-eyebrow">Next layer</p>
+      <h2>Repositories plus context</h2>
+      <p>The repository alone is rarely the whole story. When a project is interesting enough, I pair it with technical notes or a dedicated page so the architecture and trade-offs remain legible later.</p>
+    </article>
+  </div>
+</section>

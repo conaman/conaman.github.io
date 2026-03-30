@@ -1,0 +1,31 @@
+- title: unreal-mcp-ue4
+  slug: unreal-mcp-ue4
+  kind: Featured Project
+  status: Active
+  headline: UE4.27.2-focused MCP server for practical editor and content workflows.
+  summary: Built for teams that still ship on UE4.27 and need automation that respects real editor constraints instead of assuming UE5-era APIs.
+  challenge: Many Unreal automation examples assume newer engine features, while real projects often stay on UE4.27.2 for years.
+  impact: Turns common inspection and content tasks into scriptable MCP-friendly workflows while staying grounded in what stock UE4.27 Python can actually support.
+  stack:
+    - UE4.27.2
+    - MCP
+    - Python Remote Execution
+    - Editor tooling
+  repository: https://github.com/conaman/unreal-mcp-ue4
+  detail_url: /projects/unreal-mcp-ue4/
+  featured: true
+- title: SyncStreamingAssetsLoader
+  slug: sync-streaming-assets-loader
+  kind: Utility Library
+  status: Published
+  headline: Unity Android helper for synchronous StreamingAssets access.
+  summary: A focused utility for situations where direct file reads are constrained and teams need a predictable loading path without spreading platform-specific logic across the codebase.
+  challenge: StreamingAssets access on Android is awkward because assets are packaged in ways that make direct synchronous reads harder than they look.
+  impact: Packages the workaround into a reusable utility so runtime code stays simpler and project code does not need to reinvent the same file-loading edge cases.
+  stack:
+    - Unity
+    - Android
+    - C#
+    - Runtime tooling
+  repository: https://github.com/conaman/SyncStreamingAssetsLoader
+  featured: true

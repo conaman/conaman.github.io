@@ -1,8 +1,8 @@
 ---
-layout: post
 title: "Introducing unreal-mcp-ue4"
 date: 2026-03-30 10:40:00 +0900
 tags: [UnrealEngine, UE4, MCP, Tooling]
+summary: "An introduction to a UE4.27.2-focused MCP server built around Unreal Python Remote Execution and practical editor workflows."
 ---
 
 `unreal-mcp-ue4` is a UE4.27.2-focused MCP server for Unreal Engine built around Unreal Python Remote Execution.

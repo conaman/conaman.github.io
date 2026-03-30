@@ -1,42 +1,77 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About | conaman</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; }
-    .wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
-    h1 { font-size: 40px; margin-bottom: 10px; }
-    h2 { margin-top: 36px; }
-    p, li { line-height: 1.75; color: #cbd5e1; }
-    a { color: #93c5fd; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .button { border: 1px solid #334155; border-radius: 10px; padding: 10px 14px; display: inline-block; background: #0b1220; }
-    .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <h1>About</h1>
-    <p>I'm conaman, a game client and engine programmer with a strong interest in Unreal Engine internals, tooling, debugging, pipeline improvement, and AI-assisted development workflows.</p>
+---
+title: About
+description: "About conaman, a game client and engine programmer focused on Unreal Engine tooling and practical workflow automation."
+nav_key: about
+permalink: /about/
+---
+<section class="page-hero">
+  <p class="section-eyebrow">About</p>
+  <h1>Seungjee Baek, working at the intersection of engine understanding and usable tooling.</h1>
+  <p class="page-intro">I am interested in the parts of development that sit just beside the main gameplay code path: editor workflows, debugging, content pipelines, build edges, and the small utilities that save teams from repeating the same friction.</p>
+</section>
 
-    <div class="links">
-      <a class="button" href="/portfolio.html">Portfolio</a>
-      <a class="button" href="/projects.html">Projects</a>
-      <a class="button" href="https://github.com/conaman">GitHub</a>
-    </div>
+<section class="section">
+  <div class="panel-grid">
+    <article class="panel">
+      <div class="profile-card">
+        <img class="profile-card__avatar" src="{{ site.avatar }}" alt="GitHub profile image for conaman">
+        <div>
+          <p class="section-eyebrow">Profile</p>
+          <h2>conaman</h2>
+          <p>Game client and engine programmer with a strong interest in Unreal Engine internals, developer tooling, and technical documentation that stays grounded in real production constraints.</p>
+        </div>
+      </div>
+    </article>
 
-    <h2>What I work on</h2>
-    <ul>
-      <li>Unreal Engine editor and content workflows</li>
-      <li>Game-client and engine-adjacent technical problem solving</li>
-      <li>Developer tooling and automation</li>
-      <li>Technical writing and implementation notes</li>
-    </ul>
-
-    <h2>What this site is for</h2>
-    <p>This site is evolving into a project-first technical blog. The main goals are to introduce public repositories, explain why they were built, and document the implementation details that may help other developers.</p>
+    <article class="panel">
+      <p class="section-eyebrow">Current direction</p>
+      <h2>Practical, engine-aware workflows</h2>
+      <p>The most interesting work for me usually lives where system behavior is not obvious at first glance. I like digging into how something actually works, then turning that understanding into a clearer workflow, tool, or note that others can reuse.</p>
+    </article>
   </div>
-</body>
-</html>
+</section>
+
+<section class="section">
+  <div class="panel-grid">
+    <article class="panel">
+      <p class="section-eyebrow">What I work on</p>
+      <ul class="info-list">
+        <li>
+          <strong>Unreal tooling</strong>
+          Editor-facing helpers, project inspection flows, and utilities that fit the engine version a team is really using.
+        </li>
+        <li>
+          <strong>Debugging and analysis</strong>
+          Source-level exploration, build behavior, and engine notes that make tricky systems easier to reason about.
+        </li>
+      </ul>
+    </article>
+
+    <article class="panel">
+      <p class="section-eyebrow">How I think about the work</p>
+      <ul class="info-list">
+        <li>
+          <strong>Practical over performative</strong>
+          I prefer tools that survive real project constraints over demos that only look clean in ideal conditions.
+        </li>
+        <li>
+          <strong>Document the why</strong>
+          Good notes preserve trade-offs, compatibility boundaries, and debugging context, not just the final commands.
+        </li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page-hero">
+    <p class="section-eyebrow">Elsewhere</p>
+    <h2>Find the public work</h2>
+    <p class="page-intro">GitHub is the main hub for repositories, while this site is where those repositories get context. If you want the shortest path into the work, start with the projects page and the `unreal-mcp-ue4` case study.</p>
+    <div class="cta-row">
+      <a class="button button-primary" href="https://github.com/conaman">GitHub</a>
+      <a class="button button-secondary" href="{{ '/projects/' | relative_url }}">Projects</a>
+      <a class="button button-secondary" href="mailto:{{ site.email }}">Email</a>
+    </div>
+  </div>
+</section>
