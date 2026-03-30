@@ -26,6 +26,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -34,6 +36,8 @@ body {
   color: var(--text);
   font-family: "IBM Plex Sans KR", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -1076,6 +1080,32 @@ img {
 
   .project-card .card-links .button {
     flex: 1 1 100%;
+  }
+
+  .project-card,
+  .project-card > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card p,
+  .project-card .project-card__top,
+  .project-card .info-list,
+  .project-card .tag-list,
+  .project-card .card-links {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-card__top > :first-child,
+  .project-card .info-list li,
+  .project-card .card-links .button {
+    min-width: 0;
+    max-width: 100%;
   }
 
   .feed-intro h1 {
