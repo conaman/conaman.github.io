@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | conaman</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 36px 20px 72px; }
+    .hero { display: grid; grid-template-columns: 160px 1fr; gap: 24px; align-items: center; }
+    .avatar { width: 160px; height: 160px; border-radius: 50%; border: 3px solid #334155; object-fit: cover; }
+    h1 { font-size: 42px; margin: 0 0 10px; }
+    h2 { margin-top: 36px; font-size: 28px; }
+    p, li { line-height: 1.8; color: #cbd5e1; }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .button { border: 1px solid #334155; border-radius: 10px; padding: 10px 14px; display: inline-block; background: #0b1220; }
+    .section { margin-top: 8px; }
+    @media (max-width: 700px) { .hero { grid-template-columns: 1fr; } .avatar { width: 132px; height: 132px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/136544?v=4" alt="Seungjee Baek GitHub profile photo">
+      <div>
+        <h1>About conaman</h1>
+        <p>Seungjee Baek. Game client and engine programmer focused on Unreal Engine internals, tooling, debugging, automation, and practical AI-assisted development workflows.</p>
+        <div class="links">
+          <a class="button" href="https://github.com/conaman">GitHub</a>
+          <a class="button" href="/portfolio.html">Portfolio</a>
+          <a class="button" href="/projects.html">Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Interests</h2>
+      <ul>
+        <li>Unreal Engine 4.27-era production realities and engine-adjacent workflows</li>
+        <li>Editor tooling, content pipelines, source-control-aware utilities, and automation</li>
+        <li>Deep technical write-ups that explain implementation details clearly</li>
+        <li>Applying AI tools to real development and debugging work instead of toy demos</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>This site</h2>
+      <p>This site is being shaped into a project-first technical blog. The goal is to introduce public repositories, explain why they were built, and document the design and implementation details behind them.</p>
+    </section>
+  </div>
+</body>
+</html>
