@@ -831,7 +831,7 @@ img {
 
 .info-list li {
   flex: 1 1 240px;
-  min-height: 100%;
+  min-height: 0;
   padding: 16px;
   background: rgba(246, 248, 250, 0.9);
   border: 1px solid rgba(208, 215, 222, 0.82);
@@ -1125,6 +1125,12 @@ img {
   .project-card .card-links {
     padding-top: 14px;
     padding-bottom: 0;
+  }
+
+  .info-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .feed-intro h1 {
