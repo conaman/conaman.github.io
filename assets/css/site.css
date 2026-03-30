@@ -245,6 +245,7 @@ img {
   margin-top: 10px;
   font-size: clamp(2rem, 5vw, 3.2rem);
   max-width: none;
+  white-space: nowrap;
 }
 
 .page-hero h1,
@@ -961,6 +962,10 @@ img {
   .site-nav a {
     flex: 1 1 calc(50% - 6px);
     text-align: center;
+  }
+
+  .feed-intro h1 {
+    white-space: normal;
   }
 
   .profile-card {
