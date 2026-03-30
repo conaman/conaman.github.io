@@ -369,21 +369,6 @@ img {
   font-size: 0.95rem;
 }
 
-.sidebar-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.sidebar-tags span {
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(9, 105, 218, 0.06);
-  border: 1px solid rgba(9, 105, 218, 0.12);
-  color: var(--accent-strong);
-  font-size: 0.86rem;
-}
-
 .sidebar-links {
   display: grid;
   gap: 10px;
