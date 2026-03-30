@@ -86,8 +86,7 @@ img {
   border: 1px solid var(--panel-border);
   border-radius: 999px;
   backdrop-filter: blur(18px);
-  position: sticky;
-  top: 16px;
+  position: static;
   z-index: 10;
   box-shadow: 0 14px 34px rgba(31, 35, 40, 0.08);
 }
@@ -640,6 +639,15 @@ img {
   padding: 24px;
 }
 
+.project-card,
+.writing-card,
+.panel,
+.focus-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .focus-card h3,
 .sidebar-card h2,
 .feed-card h2,
@@ -743,7 +751,7 @@ img {
   justify-content: space-between;
   align-items: start;
   gap: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .status-badge {
@@ -760,6 +768,20 @@ img {
 .project-card__details,
 .info-list {
   margin-top: 18px;
+}
+
+.project-card .tag-list,
+.project-card .card-links {
+  margin-top: 0;
+}
+
+.project-card .card-links {
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.project-card .card-links .button {
+  flex: 0 0 auto;
 }
 
 .info-list li {
@@ -916,8 +938,6 @@ img {
   }
 
   .site-header {
-    position: static;
-    top: auto;
     margin-top: 0;
     padding: 12px 14px;
     gap: 12px;
@@ -991,6 +1011,10 @@ img {
     flex: 1 1 calc(50% - 6px);
     padding: 8px 10px;
     text-align: center;
+  }
+
+  .project-card .card-links .button {
+    flex: 1 1 100%;
   }
 
   .feed-intro h1 {
