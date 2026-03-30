@@ -11,7 +11,7 @@ nav_key: home
     <p class="hero-lede">I am especially interested in game engines, developer tooling, debugging, and automation with a strong bias toward practical workflows that teams can actually use. This site is where public repos, implementation notes, and deep dives come together.</p>
     <div class="cta-row">
       <a class="button button-primary" href="{{ '/projects/' | relative_url }}">Explore projects</a>
-      <a class="button button-secondary" href="{{ '/writing/' | relative_url }}">Read technical notes</a>
+      <a class="button button-secondary" href="{{ '/writing/' | relative_url }}">Read articles</a>
       <a class="button button-secondary" href="https://github.com/conaman">Open GitHub</a>
     </div>
     <div class="hero-badges">
@@ -40,7 +40,7 @@ nav_key: home
       </div>
       <div class="metric">
         <strong>{{ site.posts | size }}</strong>
-        <span class="metric-label">published notes</span>
+        <span class="metric-label">published articles</span>
       </div>
       <div class="metric">
         <strong>Game Engines</strong>
@@ -53,35 +53,28 @@ nav_key: home
 </section>
 
 <section class="section">
-  <div class="section-heading">
-    <div>
-      <p class="section-eyebrow">Focus</p>
-      <h2>What I like building</h2>
-    </div>
-    <p>Projects here are less about abstract demos and more about technical leverage: tools that reduce friction, surface engine state, and make hard-to-debug workflows easier to reason about.</p>
-  </div>
+  <div class="priority-grid">
+    <a class="priority-card priority-card-projects" href="{{ '/projects/' | relative_url }}">
+      <p class="section-eyebrow">Projects</p>
+      <h2>Open the work first</h2>
+      <p>Browse the repos, case studies, and implementation-heavy experiments that best represent the site.</p>
+      <div class="priority-card__meta">
+        <strong>{{ site.data.projects | size }}</strong>
+        <span>featured entries</span>
+      </div>
+      <span class="priority-card__link">Browse projects</span>
+    </a>
 
-  <div class="focus-grid">
-    <article class="focus-card">
-      <p class="card-eyebrow">01</p>
-      <h3>Game Engines</h3>
-      <p>Systems-level curiosity about how engines behave, where constraints come from, and how better tools can make that behavior easier to work with.</p>
-    </article>
-    <article class="focus-card">
-      <p class="card-eyebrow">02</p>
-      <h3>Debugging</h3>
-      <p>Tracing problems through build systems, engine code paths, content workflows, and integration edges where real projects get stuck.</p>
-    </article>
-    <article class="focus-card">
-      <p class="card-eyebrow">03</p>
-      <h3>Automation</h3>
-      <p>Turning multi-step manual routines into reliable workflows without pretending that production environments are cleaner than they are.</p>
-    </article>
-    <article class="focus-card">
-      <p class="card-eyebrow">04</p>
-      <h3>Technical Writing</h3>
-      <p>Project pages and notes that explain not just what the code does, but why the constraints and trade-offs matter.</p>
-    </article>
+    <a class="priority-card priority-card-articles" href="{{ '/writing/' | relative_url }}">
+      <p class="section-eyebrow">Articles</p>
+      <h2>Read the technical context</h2>
+      <p>Open the source notes, build references, and write-ups that explain the reasoning behind the code.</p>
+      <div class="priority-card__meta">
+        <strong>{{ site.posts | size }}</strong>
+        <span>published articles</span>
+      </div>
+      <span class="priority-card__link">Browse articles</span>
+    </a>
   </div>
 </section>
 
@@ -138,10 +131,10 @@ nav_key: home
 <section class="section">
   <div class="section-heading">
     <div>
-      <p class="section-eyebrow">Writing</p>
-      <h2>Notes that support the code</h2>
+      <p class="section-eyebrow">Articles</p>
+      <h2>Articles that explain the work</h2>
     </div>
-    <p>Write-ups here are meant to document design intent, build references, and source-level findings so the reasoning behind a project is as visible as the repository itself.</p>
+    <p>These write-ups document build behavior, source-level findings, and project intent so the reasoning behind a repository is as visible as the code itself.</p>
   </div>
 
   <div class="writing-grid">
@@ -166,6 +159,39 @@ nav_key: home
         </div>
       </article>
     {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <p class="section-eyebrow">Focus</p>
+      <h2>What I like building</h2>
+    </div>
+    <p>Projects here are less about abstract demos and more about technical leverage: tools that reduce friction, surface engine state, and make hard-to-debug workflows easier to reason about.</p>
+  </div>
+
+  <div class="focus-grid">
+    <article class="focus-card">
+      <p class="card-eyebrow">01</p>
+      <h3>Game Engines</h3>
+      <p>Systems-level curiosity about how engines behave, where constraints come from, and how better tools can make that behavior easier to work with.</p>
+    </article>
+    <article class="focus-card">
+      <p class="card-eyebrow">02</p>
+      <h3>Debugging</h3>
+      <p>Tracing problems through build systems, engine code paths, content workflows, and integration edges where real projects get stuck.</p>
+    </article>
+    <article class="focus-card">
+      <p class="card-eyebrow">03</p>
+      <h3>Automation</h3>
+      <p>Turning multi-step manual routines into reliable workflows without pretending that production environments are cleaner than they are.</p>
+    </article>
+    <article class="focus-card">
+      <p class="card-eyebrow">04</p>
+      <h3>Articles &amp; Notes</h3>
+      <p>Project pages and articles that explain not just what the code does, but why the constraints and trade-offs matter.</p>
+    </article>
   </div>
 </section>
 
