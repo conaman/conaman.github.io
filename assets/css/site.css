@@ -291,9 +291,14 @@ img {
 .home-sidebar {
   position: sticky;
   top: 24px;
+  align-self: start;
   display: grid;
   gap: 16px;
   width: 100%;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
 }
 
 .home-content {
