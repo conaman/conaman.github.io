@@ -319,10 +319,7 @@ img {
 }
 
 .sidebar-profile {
-  position: sticky;
-  top: 24px;
   gap: 16px;
-  z-index: 1;
 }
 
 .sidebar-profile__avatar {
