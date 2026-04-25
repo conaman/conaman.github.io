@@ -14,6 +14,22 @@
   repository: https://github.com/conaman/unreal-mcp-ue4
   detail_url: /projects/unreal-mcp-ue4/
   featured: true
+- title: ue4-uasset-tools
+  slug: ue4-uasset-tools
+  kind: Utility Toolkit
+  status: Published
+  headline: Standalone Python tools for inspecting UE4.27 .uasset metadata as readable JSON.
+  summary: Converts binary Unreal assets into review-friendly metadata, focused on package tables, UMG widget summaries, 2-way and 3-way diffs, and P4Merge workflows.
+  challenge: UE4 .uasset files are binary, so ordinary code review and Perforce change inspection often hide the asset structure that actually changed.
+  impact: Makes names, imports, exports, dependencies, soft references, and UMG WidgetTrees visible as text without launching Unreal Editor or linking against the engine.
+  stack:
+    - UE4.27
+    - Python 3
+    - UAsset metadata
+    - UMG
+    - Perforce P4Merge
+  repository: https://github.com/conaman/ue4-uasset-tools
+  detail_url: /projects/ue4-uasset-tools/
 - title: SyncStreamingAssetsLoader
   slug: sync-streaming-assets-loader
   kind: Utility Library

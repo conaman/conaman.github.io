@@ -1,0 +1,87 @@
+---
+title: ue4-uasset-tools
+description: "Case study for ue4-uasset-tools, a standalone Python toolkit for inspecting UE4.27 .uasset metadata as readable JSON, summaries, and diffs."
+nav_key: projects
+permalink: /projects/ue4-uasset-tools/
+---
+<section class="page-hero">
+  <p class="section-eyebrow">Utility Toolkit</p>
+  <h1>ue4-uasset-tools</h1>
+  <p class="page-intro">A small standalone Python toolkit for inspecting Unreal Engine 4.27 .uasset package metadata as readable JSON, compact UMG summaries, and reviewable diffs.</p>
+  <div class="cta-row">
+    <a class="button button-primary" href="https://github.com/conaman/ue4-uasset-tools">Repository</a>
+    <a class="button button-secondary" href="{{ '/projects/' | relative_url }}">Back to projects</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="panel-grid">
+    <article class="panel">
+      <p class="section-eyebrow">Why it exists</p>
+      <h2>Binary asset review needs more context</h2>
+      <p>UE4 assets often move through Perforce as opaque binary files, which makes it hard to understand what changed before accepting a changelist or comparing revisions.</p>
+    </article>
+    <article class="panel">
+      <p class="section-eyebrow">Core idea</p>
+      <h2>Expose the package metadata layer</h2>
+      <p>The toolkit reads UE4.27 package tables directly and turns them into deterministic text output for inspection, diffing, and visual comparison workflows.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="project-grid">
+    <article class="project-card">
+      <div class="project-card__top">
+        <div>
+          <p class="card-eyebrow">What it does</p>
+          <h2>Readable views for .uasset files</h2>
+        </div>
+      </div>
+      <p>The tools focus on making the structure inside a UE4 asset visible without opening Unreal Editor.</p>
+      <ul class="info-list">
+        <li>
+          <strong>Metadata JSON</strong>
+          Converts package summary, name, import, export, dependency, and soft reference data into readable JSON.
+        </li>
+        <li>
+          <strong>UMG summaries</strong>
+          Prints compact WidgetTree summaries for WidgetBlueprint assets, including widget names and types.
+        </li>
+        <li>
+          <strong>Review diffs</strong>
+          Provides 2-way and 3-way metadata diffs, plus a P4Merge launcher for visual comparison.
+        </li>
+      </ul>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__top">
+        <div>
+          <p class="card-eyebrow">Design boundary</p>
+          <h2>Inspection first, editing out of scope</h2>
+        </div>
+      </div>
+      <p>The generated JSON is meant for review and analysis. It is not a round-trippable editing format, and saved merge results do not modify the original .uasset files.</p>
+      <ul class="tag-list">
+        <li>UE4.27</li>
+        <li>Python 3.9+</li>
+        <li>No engine link</li>
+        <li>No third-party packages</li>
+        <li>P4Merge optional</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page-hero">
+    <p class="section-eyebrow">Workflow</p>
+    <h2>A text layer for reviewing UE4 assets.</h2>
+    <p class="page-intro">The useful result is not that binary assets become magically mergeable. It is that imports, exports, dependencies, soft references, and UMG hierarchy changes become visible enough to reason about before the editor is involved.</p>
+    <div class="cta-row">
+      <a class="button button-primary" href="https://github.com/conaman/ue4-uasset-tools">View toolkit</a>
+      <a class="button button-secondary" href="{{ '/projects/unreal-mcp-ue4/' | relative_url }}">Related UE4 project</a>
+    </div>
+  </div>
+</section>
